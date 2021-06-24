@@ -28,7 +28,8 @@ function checkAge() {
     if (age >= 21) {
       onSubmitYes();
     } else {
-      window.alert('sorry under 21...');
+      window.location.href =
+        '/Users/alanbielik/ProjectsJS/age-gate/underage.html';
     }
   }
 }
