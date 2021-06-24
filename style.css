@@ -20,6 +20,15 @@ nav {
   margin: 0 auto;
 }
 
+nav h1 {
+  font-family: cursive;
+  font-size: 60px;
+  font-style: italic;
+  margin: 0;
+  padding: 10px;
+  color: rgb(44, 165, 241);
+}
+
 nav a {
   text-decoration: none;
   font-size: 20px;
@@ -31,7 +40,7 @@ nav a {
 }
 
 nav a:hover {
-  color: lightskyblue;
+  color: rgb(44, 165, 241);
   font-size: 25px;
 }
 
@@ -57,12 +66,24 @@ nav a:hover {
 }
 
 .main-area h2:hover {
-  color: lightskyblue;
+  color: rgb(44, 165, 241);
   font-size: 75px;
 }
 
 img {
   width: 120px;
+  left: 50px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  margin-left: -400px;
+  font-family: cursive;
+  font-size: 60px;
+  font-style: italic;
+  margin: 0;
+  padding: 10px;
+  color: rgb(44, 165, 241);
 }
 
 .age-gate-container {
@@ -78,18 +99,22 @@ img {
 }
 
 .age-gate {
-  background-color: #fff;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAgx3ksjgDZbwQ5vzoI8GVHAHMao0ueWWmOw&usqp=CAU');
+  background-position: left;
+  background-size: cover;
   border-radius: 10px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  padding: 30px 50px;
-  width: 600px;
-  max-width: 80%;
+  box-shadow: 0 3px 5px rgba(250, 249, 249, 0.2);
+  padding: 90px 120px;
+  width: 700px;
+  max-width: 90%;
   text-align: center;
+  color: white;
 }
 
 .gate-message p {
   opacity: 0.7;
   font-size: 14px;
+  padding: 0;
 }
 
 .confirm-age-button {
@@ -100,7 +125,7 @@ img {
   margin: 5px;
   border-radius: 10px;
   color: #fff;
-  background-color: #3e68ff;
+  background-color: rgb(44, 165, 241);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   padding: 15px;
   min-height: 44px;
@@ -126,5 +151,6 @@ img {
 }
 
 #age-error-message {
-  color: firebrick;
+  color: red;
+  font-size: 15px;
 }
