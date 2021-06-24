@@ -1,9 +1,10 @@
 const ageGateContainer = document.querySelector('.age-gate-container');
-const submitYes = document.querySelector('.confirm-age-button');
+const confirmButton = document.querySelector('.confirm-age-button');
+const rememberMeCheckbox = document.querySelector('#remember');
 
-submitYes.addEventListener('click', checkAge);
+confirmButton.addEventListener('click', checkAge);
 
-function onSubmitYes() {
+function onConfirmButtonClick() {
   ageGateContainer.style.display = 'none';
 }
 
@@ -26,10 +27,14 @@ function checkAge() {
     }
 
     if (age >= 21) {
-      onSubmitYes();
+      onConfirmButtonClick();
     } else {
       window.location.href =
         '/Users/alanbielik/ProjectsJS/age-gate/underage.html';
     }
   }
 }
+
+// function isRememberMe() {
+//   if (rememberMeCheckbox.checked &&)
+// }
