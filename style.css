@@ -43,8 +43,7 @@ img {
   font-size: 14px;
 }
 
-a.submit-yes,
-a.submit-no {
+.confirm-age-button {
   box-sizing: border-box;
   text-decoration: none;
   display: inline-block;
@@ -60,8 +59,7 @@ a.submit-no {
   transition: 220ms all ease-in-out;
 }
 
-a.submit-yes:hover,
-a.submit-no:hover {
+.confirm-age-button:hover {
   filter: brightness(75%);
 }
 
@@ -76,4 +74,8 @@ a.submit-no:hover {
   100% {
     transform: rotate(0deg);
   }
+}
+
+#age-error-message {
+  color: firebrick;
 }
