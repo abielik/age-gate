@@ -47,37 +47,15 @@ a.submit-no:hover {
   filter: brightness(75%);
 }
 
-/* a.submit-yes:focus,
-a.submit-no:focus {
-  outline-style: solid;
-  outline-color: transparent;
-  box-shadow: 0 0 0 4px;
-} */
-
-.bouncy {
-  animation: bouncy 5s infinite;
+.rotate {
+  animation: rotation 3s infinite linear;
   position: relative;
 }
-@keyframes bouncy {
-  0% {
-    top: 0em;
-  }
-  40% {
-    top: 0em;
-  }
-  43% {
-    top: -0.9em;
-  }
-  46% {
-    top: 0em;
-  }
-  48% {
-    top: -0.4em;
-  }
+@keyframes rotation {
   50% {
-    top: 0em;
+    transform: rotate(-45deg);
   }
   100% {
-    top: 0em;
+    transform: rotate(0deg);
   }
 }
