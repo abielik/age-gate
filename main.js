@@ -1,19 +1,30 @@
 const ageGateContainer = document.querySelector('.age-gate-container');
 const confirmButton = document.querySelector('.confirm-age-button');
 const rememberMeCheckbox = document.querySelector('#remember');
+const userBirthday = document.querySelector('#DOB');
 
 confirmButton.addEventListener('click', checkAge);
+
+checkLocalStorage();
+
+if (localStorage.checkbox && localStorage.checkbox !== '') {
+  rememberMeCheckbox.setAttribute('checked', 'checked');
+  userBirthday.value = localStorage.userBirthday;
+} else {
+  rememberMeCheckbox.removeAttribute('checked');
+  userBirthday.value = '';
+}
 
 function onConfirmButtonClick() {
   ageGateContainer.style.display = 'none';
 }
 
 function checkAge() {
-  const userInput = document.querySelector('#DOB').value;
-  const DOB = new Date(userInput);
+  const userBirthdayValue = document.querySelector('#DOB').value;
+  const DOB = new Date(userBirthdayValue);
   const today = new Date();
   // Let user know if date is empty or invalid
-  if (!userInput) {
+  if (!userBirthdayValue) {
     document.querySelector('#age-error-message').innerHTML =
       'Please choose a date.';
     return false;
@@ -28,6 +39,7 @@ function checkAge() {
 
     if (age >= 21) {
       onConfirmButtonClick();
+      isRememberMe();
     } else {
       window.location.href =
         '/Users/alanbielik/ProjectsJS/age-gate/underage.html';
@@ -35,6 +47,18 @@ function checkAge() {
   }
 }
 
-// function isRememberMe() {
-//   if (rememberMeCheckbox.checked &&)
-// }
+function isRememberMe() {
+  if (rememberMeCheckbox.checked && userBirthday.value !== '') {
+    localStorage.checkbox = rememberMeCheckbox.value;
+    localStorage.userBirthday = userBirthday.value;
+  } else {
+    localStorage.checkbox = '';
+    localStorage.userBirthday = '';
+  }
+}
+
+function checkLocalStorage() {
+  if (localStorage.checkbox === 'Remember Me') {
+    onConfirmButtonClick();
+  }
+}
