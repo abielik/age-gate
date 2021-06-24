@@ -1,0 +1,83 @@
+body {
+  background-color: dimgray;
+}
+
+img {
+  width: 120px;
+  padding-top: 20px;
+}
+
+.age-gate {
+  text-align: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gate-container {
+  width: 75%;
+  background-color: rgb(226, 228, 228);
+}
+
+.gate-message h1 {
+  font-size: 32px;
+  font-weight: 600;
+  padding-top: 10px;
+  margin-bottom: 2px;
+}
+
+a.submit-yes,
+a.submit-no {
+  box-sizing: border-box;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #3e68ff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  min-height: 44px;
+  min-width: 10ch;
+  transition: 220ms all ease-in-out;
+}
+
+a.submit-yes:hover,
+a.submit-no:hover {
+  filter: brightness(75%);
+}
+
+/* a.submit-yes:focus,
+a.submit-no:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 4px;
+} */
+
+.bouncy {
+  animation: bouncy 5s infinite;
+  position: relative;
+}
+@keyframes bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
