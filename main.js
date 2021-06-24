@@ -2,6 +2,7 @@ const ageGateContainer = document.querySelector('.age-gate-container');
 const confirmButton = document.querySelector('.confirm-age-button');
 const rememberMeCheckbox = document.querySelector('#remember');
 const userBirthday = document.querySelector('#DOB');
+const ageErrorMessage = document.querySelector('#age-error-message');
 
 confirmButton.addEventListener('click', checkAge);
 
@@ -20,13 +21,12 @@ function onConfirmButtonClick() {
 }
 
 function checkAge() {
-  const userBirthdayValue = document.querySelector('#DOB').value;
+  const userBirthdayValue = userBirthday.value;
   const DOB = new Date(userBirthdayValue);
   const today = new Date();
   // Let user know if date is empty or invalid
   if (!userBirthdayValue) {
-    document.querySelector('#age-error-message').innerHTML =
-      'Please choose a date.';
+    ageErrorMessage.innerHTML = 'Please choose a date.';
     return false;
   } else {
     let age = today.getFullYear() - DOB.getFullYear();
@@ -47,6 +47,7 @@ function checkAge() {
   }
 }
 
+// checks if remember me box is checked upon age confirmation click
 function isRememberMe() {
   if (rememberMeCheckbox.checked && userBirthday.value !== '') {
     localStorage.checkbox = rememberMeCheckbox.value;
@@ -57,6 +58,7 @@ function isRememberMe() {
   }
 }
 
+// first thing to run once page loads
 function checkLocalStorage() {
   if (localStorage.checkbox === 'Remember Me') {
     onConfirmButtonClick();
