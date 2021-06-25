@@ -13,12 +13,10 @@ ab.addEventListener('mouseout', resetInitials);
 
 checkLocalStorage();
 
-if (localStorage.checkbox && localStorage.checkbox !== '') {
+if (localStorage.checkbox) {
   rememberMeCheckbox.setAttribute('checked', 'checked');
-  userBirthday.value = localStorage.userBirthday;
 } else {
   rememberMeCheckbox.removeAttribute('checked');
-  userBirthday.value = '';
 }
 
 function transformInitials() {
