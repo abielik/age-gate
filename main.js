@@ -8,8 +8,8 @@ const ab = document.querySelector('#ab');
 confirmButton.addEventListener('click', checkAge);
 
 // event listeners to transform "AB" on main page
-ab.addEventListener('mouseover', transformInitials);
-ab.addEventListener('mouseout', resetInitials);
+ab.addEventListener('mouseover', transformInitialsOnHover);
+ab.addEventListener('mouseout', resetInitialsAfterHover);
 
 checkLocalStorage();
 
@@ -19,11 +19,11 @@ if (localStorage.checkbox) {
   rememberMeCheckbox.removeAttribute('checked');
 }
 
-function transformInitials() {
+function transformInitialsOnHover() {
   ab.innerText = "Alan's Brewery";
 }
 
-function resetInitials() {
+function resetInitialsAfterHover() {
   ab.innerText = 'AB';
 }
 
