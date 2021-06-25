@@ -10,27 +10,49 @@ body {
   font-family: poppins;
 }
 
-nav {
-  position: fixed;
+#page-container {
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: url('./bar-background.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar {
+  /* position: fixed;
   width: 100%;
   height: 210px;
   left: 0;
   top: 0;
   text-align: center;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 40px; */
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-nav h1 {
+.navbar h1 {
   font-family: cursive;
   font-size: 70px;
   font-style: italic;
-  margin: 0;
-  padding: 10px;
+  /* margin: 0;
+  padding: 10px; */
   color: rgb(44, 165, 241);
+  width: 110px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
 }
 
 nav a {
+  display: inline-block;
   text-decoration: none;
   font-size: 20px;
   color: #fff;
@@ -45,35 +67,73 @@ nav a:hover {
   font-size: 25px;
 }
 
-#main-area {
+.main-area {
   width: 100%;
   height: 100vh;
-  background: url('./bar-background.jpeg');
+  /* background: url('./bar-background.jpeg');
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+
   font-size: 2vw;
   color: #fff;
 }
 
-#main-area h2 {
+.col1 {
+  flex-basis: 75%;
+  position: relative;
+  margin-left: 8%;
+}
+
+.col1 h2 {
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 60px;
+  margin: 0 0 25px;
+  transition: all 1s ease;
+}
+
+.col1 h2:hover {
+  color: rgb(44, 165, 241);
+  font-size: 75px;
+}
+
+.col1 p {
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0 0 25px;
+}
+
+.col2 {
+  position: relative;
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.col1,
+.col2 {
+  text-align: center;
+}
+
+/* #main-area h2 {
   font-family: cursive;
   font-weight: bold;
   font-size: 60px;
   margin: 0 0 25px;
   transition: all 1s ease;
   margin-top: 100px;
-}
+} */
 
-#main-area h2:hover {
+/* #main-area h2:hover {
   color: rgb(44, 165, 241);
   font-size: 75px;
-}
+} */
 
-img {
+.col2 img {
   width: 120px;
   left: 50px;
   padding-bottom: 20px;

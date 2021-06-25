@@ -8,8 +8,8 @@ const ab = document.querySelector('#ab');
 confirmButton.addEventListener('click', onConfirmButtonClick);
 
 // event listeners to transform "AB" on main page
-ab.addEventListener('mouseover', transformInitialsOnHover);
-ab.addEventListener('mouseout', resetInitialsAfterHover);
+// ab.addEventListener('mouseover', transformInitialsOnHover);
+// ab.addEventListener('mouseout', resetInitialsAfterHover);
 
 // as soon as page loads, check localStorage
 checkLocalStorage();
