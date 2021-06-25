@@ -58,7 +58,7 @@ function getAge(birthday) {
 function checkAge(age) {
   // must check age !== 0 for edge case: if birthday year equals the current year but the birthday month hasn't occured yet
   if (!age) {
-    ageErrorMessage.innerText = 'Please choose a date.';
+    ageErrorMessage.innerText = 'Please choose a valid date.';
     return;
   }
   if (age >= 21) {
