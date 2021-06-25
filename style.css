@@ -22,7 +22,7 @@ nav {
 
 nav h1 {
   font-family: cursive;
-  font-size: 60px;
+  font-size: 70px;
   font-style: italic;
   margin: 0;
   padding: 10px;
@@ -59,10 +59,12 @@ nav a:hover {
 }
 
 #main-area h2 {
+  font-family: cursive;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 60px;
   margin: 0 0 25px;
   transition: all 1s ease;
+  margin-top: 100px;
 }
 
 #main-area h2:hover {

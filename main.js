@@ -41,34 +41,28 @@ function checkAge() {
   if (!userBirthdayValue) {
     ageErrorMessage.innerHTML = 'Please choose a date.';
     return false;
-  } else {
-    let age = today.getFullYear() - DOB.getFullYear();
-    console.log(age);
-    const month = today.getMonth() - DOB.getMonth();
-    // ensure the month and day have passed otherwise subtract 1 from age
-    if (month < 0 || (month === 0 && today.getDate() < DOB.getDate())) {
-      age--;
-    }
+  }
+  let age = today.getFullYear() - DOB.getFullYear();
+  console.log(age);
+  const month = today.getMonth() - DOB.getMonth();
+  // ensure the month and day have passed otherwise subtract 1 from age
+  if (month < 0 || (month === 0 && today.getDate() < DOB.getDate())) {
+    age--;
+  }
 
-    if (age >= 21) {
-      onConfirmButtonClick();
-      isRememberMe();
-    } else {
-      window.location.href =
-        '/Users/alanbielik/ProjectsJS/age-gate/underage.html';
+  if (age >= 21) {
+    onConfirmButtonClick();
+    if (rememberMeCheckbox.checked) {
+      setRememberMeStorage();
     }
+  } else {
+    window.location.href = './underage.html';
   }
 }
 
 // checks if remember me box is checked upon age confirmation click
-function isRememberMe() {
-  if (rememberMeCheckbox.checked && userBirthday.value !== '') {
-    localStorage.checkbox = rememberMeCheckbox.value;
-    localStorage.userBirthday = userBirthday.value;
-  } else {
-    localStorage.checkbox = '';
-    localStorage.userBirthday = '';
-  }
+function setRememberMeStorage() {
+  localStorage.checkbox = rememberMeCheckbox.value;
 }
 
 // first thing to run once page loads
