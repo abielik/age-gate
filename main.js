@@ -3,8 +3,13 @@ const confirmButton = document.querySelector('.confirm-age-button');
 const rememberMeCheckbox = document.querySelector('#remember');
 const userBirthday = document.querySelector('#DOB');
 const ageErrorMessage = document.querySelector('#age-error-message');
+const ab = document.querySelector('#ab');
 
 confirmButton.addEventListener('click', checkAge);
+
+// event listeners to transform "AB" on main page
+ab.addEventListener('mouseover', transformInitials);
+ab.addEventListener('mouseout', resetInitials);
 
 checkLocalStorage();
 
@@ -14,6 +19,14 @@ if (localStorage.checkbox && localStorage.checkbox !== '') {
 } else {
   rememberMeCheckbox.removeAttribute('checked');
   userBirthday.value = '';
+}
+
+function transformInitials() {
+  ab.innerText = "Alan's Brewery";
+}
+
+function resetInitials() {
+  ab.innerText = 'AB';
 }
 
 function onConfirmButtonClick() {
