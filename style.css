@@ -44,7 +44,7 @@ nav a:hover {
   font-size: 25px;
 }
 
-.main-area {
+#main-area {
   width: 100%;
   height: 100vh;
   background: url('https://www.oskarblues.com/wp-content/uploads/2020/01/08162019_LongmontTaproom3.jpg');
@@ -58,14 +58,14 @@ nav a:hover {
   color: #fff;
 }
 
-.main-area h2 {
+#main-area h2 {
   font-weight: bold;
   font-size: 40px;
   margin: 0 0 25px;
   transition: all 1s ease;
 }
 
-.main-area h2:hover {
+#main-area h2:hover {
   color: rgb(44, 165, 241);
   font-size: 75px;
 }
