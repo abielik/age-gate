@@ -4,7 +4,11 @@ const rememberMeCheckbox = document.querySelector('#remember');
 const userBirthday = document.querySelector('#DOB');
 const ageErrorMessage = document.querySelector('#age-error-message');
 const ab = document.querySelector('#ab');
+const menuList = document.querySelector('.menu-icon');
+const nav = document.querySelector('nav');
 
+let isMenuOpen = false;
+menuList.addEventListener('click', toggleMenu);
 confirmButton.addEventListener('click', onConfirmButtonClick);
 
 // event listeners to transform "AB" on main page
@@ -81,4 +85,9 @@ function checkLocalStorage() {
   if (localStorage.is21) {
     ageGateContainer.style.display = 'none';
   }
+}
+
+function toggleMenu() {
+  isMenuOpen ? (nav.style.maxHeight = '0px') : (nav.style.maxHeight = '100%');
+  isMenuOpen = !isMenuOpen;
 }
