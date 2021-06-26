@@ -86,7 +86,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  margin-bottom: -270px;
   font-size: 2vw;
   color: #fff;
 }
@@ -94,7 +94,8 @@ nav a:hover {
 .col1 {
   flex-basis: 75%;
   position: relative;
-  margin-left: 8%;
+  margin-left: 4%;
+  margin-bottom: 180px;
 }
 
 .col1 h2 {
@@ -118,6 +119,8 @@ nav a:hover {
 }
 
 .col2 {
+  margin-bottom: 150px;
+  margin-left: 70px;
   position: relative;
   flex-basis: 60%;
   display: flex;
@@ -238,7 +241,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
   nav {
     width: 100%;
     background: linear-gradient(#87cefa, #365264);
@@ -264,5 +267,19 @@ nav a:hover {
   }
   #ab {
     display: none;
+  }
+
+  .main-area {
+    margin-bottom: -150px;
+  }
+
+  .col1 {
+    flex-basis: 100%;
+  }
+  .col1 h2 {
+    font-size: 35px;
+  }
+  .col1 p {
+    font-size: 20px;
   }
 }
