@@ -275,6 +275,7 @@ nav a:hover {
 
   .col1 {
     flex-basis: 100%;
+    margin-bottom: 80px;
   }
   .col1 h2 {
     font-size: 35px;
