@@ -296,4 +296,20 @@ nav a:hover {
     margin: 0px;
     bottom: 55px;
   }
+
+  .age-gate {
+    position: relative;
+    background-size: cover;
+  }
+  .gate-message h2 {
+    color: rgb(44, 165, 241);
+    font-weight: bolder;
+  }
+
+  .gate-message,
+  .gate-buttons {
+    width: 160px;
+    position: relative;
+    right: 30px;
+  }
 }
