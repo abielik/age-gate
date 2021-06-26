@@ -103,19 +103,22 @@ nav a:hover {
   font-weight: bold;
   font-size: 60px;
   margin: 0 0 25px;
-  transition: all 1s ease;
 }
-
-.col1 h2:hover {
-  color: rgb(44, 165, 241);
-  font-size: 75px;
-}
-
 .col1 p {
   font-family: cursive;
   font-weight: bold;
   font-size: 40px;
   margin: 0 0 25px;
+}
+
+.col1 h2,
+.col1 p {
+  transition: all 1s ease;
+}
+
+.col1 h2:hover,
+.col1 p:hover {
+  color: rgb(44, 165, 241);
 }
 
 .col2 {
@@ -282,5 +285,15 @@ nav a:hover {
   }
   .col1 p {
     font-size: 20px;
+  }
+  .col1 h2:hover,
+  .col1 p:hover {
+    color: rgb(44, 165, 241);
+  }
+
+  .col2 {
+    flex-basis: 100%;
+    margin: 0px;
+    bottom: 55px;
   }
 }
