@@ -54,8 +54,9 @@ function checkAge(age) {
   }
   if (age >= 21) {
     ageGateContainer.style.display = 'none';
+    menuList.style.pointerEvents = 'auto';
     if (rememberMeCheckbox.checked) {
-      setRememberMeStorage();
+      setRememberMeLocalStorage();
     }
   } else {
     window.location.href = './underage.html';
@@ -63,7 +64,7 @@ function checkAge(age) {
 }
 
 // checks if remember me box is checked upon age confirmation click
-function setRememberMeStorage() {
+function setRememberMeLocalStorage() {
   localStorage.is21 = true;
 }
 
@@ -71,6 +72,7 @@ function setRememberMeStorage() {
 function checkLocalStorage() {
   if (localStorage.is21) {
     ageGateContainer.style.display = 'none';
+    menuList.style.pointerEvents = 'auto';
   }
 }
 
