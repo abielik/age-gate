@@ -8,7 +8,7 @@ const menuList = document.querySelector('.menu-icon');
 const nav = document.querySelector('nav');
 
 let isMenuOpen = false;
-menuList.addEventListener('click', toggleMenu);
+menuList.addEventListener('click', toggleMenuOnClick);
 confirmButton.addEventListener('click', onConfirmButtonClick);
 
 // event listeners to transform "AB" on main page
@@ -87,7 +87,7 @@ function checkLocalStorage() {
   }
 }
 
-function toggleMenu() {
+function toggleMenuOnClick() {
   isMenuOpen ? (nav.style.maxHeight = '0px') : (nav.style.maxHeight = '100%');
   isMenuOpen = !isMenuOpen;
 }
