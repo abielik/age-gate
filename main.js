@@ -3,7 +3,6 @@ const confirmButton = document.querySelector('.confirm-age-button');
 const rememberMeCheckbox = document.querySelector('#remember');
 const userBirthday = document.querySelector('#DOB');
 const ageErrorMessage = document.querySelector('#age-error-message');
-const ab = document.querySelector('#ab');
 const menuList = document.querySelector('.menu-icon');
 const nav = document.querySelector('nav');
 
@@ -11,20 +10,8 @@ let isMenuOpen = false;
 menuList.addEventListener('click', toggleMenuOnClick);
 confirmButton.addEventListener('click', onConfirmButtonClick);
 
-// event listeners to transform "AB" on main page
-// ab.addEventListener('mouseover', transformInitialsOnHover);
-// ab.addEventListener('mouseout', resetInitialsAfterHover);
-
 // as soon as page loads, check localStorage
 checkLocalStorage();
-
-// 2 functions for transforming "AB" during mouse hover and off
-function transformInitialsOnHover() {
-  ab.innerText = "Alan's Brewery";
-}
-function resetInitialsAfterHover() {
-  ab.innerText = 'AB';
-}
 
 function onConfirmButtonClick() {
   const age = getAge(new Date(userBirthday.value));
