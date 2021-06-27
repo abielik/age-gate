@@ -23,14 +23,6 @@ body {
 }
 
 .navbar {
-  /* position: fixed;
-  width: 100%;
-  height: 210px;
-  left: 0;
-  top: 0;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 40px; */
   width: 100%;
   display: flex;
   align-items: center;
@@ -40,8 +32,6 @@ body {
   font-family: cursive;
   font-size: 70px;
   font-style: italic;
-  /* margin: 0;
-  padding: 10px; */
   color: rgb(44, 165, 241);
   width: 110px;
   margin: 30px 0;
@@ -80,9 +70,6 @@ nav a:hover {
 .main-area {
   width: 100%;
   height: 100vh;
-  /* background: url('./bar-background.jpeg');
-  background-position: center;
-  background-size: cover; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,20 +122,6 @@ nav a:hover {
   text-align: center;
 }
 
-/* #main-area h2 {
-  font-family: cursive;
-  font-weight: bold;
-  font-size: 60px;
-  margin: 0 0 25px;
-  transition: all 1s ease;
-  margin-top: 100px;
-} */
-
-/* #main-area h2:hover {
-  color: rgb(44, 165, 241);
-  font-size: 75px;
-} */
-
 .col2 img {
   width: 120px;
   left: 50px;
@@ -178,11 +151,11 @@ nav a:hover {
 }
 
 .age-gate {
-  background: url('./agegate-pic.jpeg');
+  background-image: url(./agegate-pic.jpeg);
   background-position: left;
   background-size: cover;
   border-radius: 10px;
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 15px rgb(0 0 0 / 20%);
   padding: 90px 120px;
   width: 700px;
   max-width: 90%;
@@ -230,7 +203,7 @@ nav a:hover {
 }
 
 #age-error-message {
-  color: red;
+  color: rgb(255, 59, 59);
   font-size: 15px;
 }
 
@@ -298,18 +271,16 @@ nav a:hover {
   }
 
   .age-gate {
-    position: relative;
-    background-size: cover;
+    background-image: none;
+    background: linear-gradient(rgb(0, 0, 0), rgb(44, 165, 241));
   }
   .gate-message h2 {
     color: rgb(44, 165, 241);
     font-weight: bolder;
   }
 
-  .gate-message,
-  .gate-buttons {
-    width: 160px;
-    position: relative;
-    right: 30px;
+  .confirm-age-button {
+    background-color: rgb(241, 238, 44);
+    color: black;
   }
 }
