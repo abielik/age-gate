@@ -99,7 +99,6 @@ body.show-age-gate .menu-icon {
 }
 
 .logo {
-  margin-left: -400px;
   font-family: cursive;
   font-size: 60px;
   font-style: italic;
@@ -129,8 +128,8 @@ body.show-age-gate .age-gate-container {
   background-size: cover;
   border-radius: 10px;
   box-shadow: 0 15px 15px rgb(0 0 0 / 20%);
-  padding: 70px 30px;
-  width: 700px;
+  padding: 80px 30px;
+  width: 750px;
   max-width: 90%;
   text-align: center;
   color: white;
@@ -216,9 +215,9 @@ body.show-age-gate .age-gate-container {
   .menu-icon {
     display: block;
   }
-  #ab {
-    font-size: 35px;
-    width: 55px;
+  .logo {
+    font-size: 50px;
+    padding-bottom: 20px;
   }
 
   .rotate {
