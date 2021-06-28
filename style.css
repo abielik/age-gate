@@ -37,12 +37,12 @@ body {
   margin: 30px 0;
 }
 
-nav {
+#navigation {
   flex: 1;
   text-align: right;
 }
 
-nav a {
+#navigation a {
   display: inline-block;
   text-decoration: none;
   font-size: 20px;
@@ -53,7 +53,7 @@ nav a {
   transition: color 0.5s ease;
 }
 
-nav a:hover {
+#navigation a:hover {
   color: rgb(44, 165, 241);
 }
 
@@ -208,7 +208,7 @@ nav a:hover {
 }
 
 @media only screen and (max-width: 900px) {
-  nav {
+  #navigation {
     width: 100%;
     background: linear-gradient(#87cefa, #365264);
     position: absolute;
@@ -219,13 +219,13 @@ nav a:hover {
     transition: 0.5s;
     max-height: 0px;
   }
-  nav a {
+  #navigation a {
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
     transition: none;
   }
-  nav a:hover {
+  #navigation a:hover {
     color: rgb(214, 110, 25);
   }
   .menu-icon {

@@ -4,7 +4,7 @@ const rememberMeCheckbox = document.querySelector('#remember');
 const userBirthday = document.querySelector('#DOB');
 const ageErrorMessage = document.querySelector('#age-error-message');
 const menuList = document.querySelector('.menu-icon');
-const nav = document.querySelector('nav');
+const nav = document.querySelector('#navigation');
 
 let isMenuOpen = false;
 menuList.addEventListener('click', toggleMenuOnClick);
