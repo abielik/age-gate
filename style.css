@@ -58,9 +58,7 @@ body.show-age-gate .menu-icon {
   width: 35px;
   cursor: pointer;
   display: none;
-  text-align: right;
   z-index: 10;
-  margin-top: 15px;
 }
 
 .main-area {
