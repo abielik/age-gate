@@ -1,4 +1,3 @@
-const ageGateContainer = document.querySelector('.age-gate-container');
 const confirmButton = document.querySelector('.confirm-age-button');
 const rememberMeCheckbox = document.querySelector('#remember');
 const userBirthday = document.querySelector('#DOB');
@@ -11,7 +10,6 @@ menuList.addEventListener('click', toggleMenuOnClick);
 confirmButton.addEventListener('click', onConfirmButtonClick);
 
 // as soon as page loads, check localStorage
-
 if (!isAlreadyAllowedAccess()) {
   showAgeGate();
 }
@@ -42,7 +40,7 @@ function getAge(birthday) {
 
   /**
    * if none of the above IF statements are truthy, this means the user is born in the current month, and the current year is the year they turn 21.
-   * Now it will determine if their birthday day has come or not
+   * Now it will determine if their birthday DAY has come or not
    * the getDate() is slightly off which is why the If statement compares against the number 1 and not 0
    */
   const diffInDays = today.getDate() - birthday.getDate();
@@ -65,7 +63,6 @@ function checkAge(age) {
   }
 
   // user is 21+
-
   hideAgeGate();
   if (rememberMeCheckbox.checked) {
     setRememberMeLocalStorage();
@@ -80,7 +77,6 @@ function hideAgeGate() {
   document.body.classList.remove('show-age-gate');
 }
 
-// checks if remember me box is checked upon age confirmation click
 function setRememberMeLocalStorage() {
   localStorage.setItem('is21', 'true');
 }
