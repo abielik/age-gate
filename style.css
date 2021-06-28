@@ -191,6 +191,7 @@ nav a:hover {
 .rotate {
   animation: rotation 3s infinite linear;
   position: relative;
+  animation-delay: 0.04s;
 }
 @keyframes rotation {
   50% {
