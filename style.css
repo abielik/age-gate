@@ -26,6 +26,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navbar h1 {
@@ -37,10 +38,9 @@ body {
   margin: 30px 0;
 }
 
-#navigation {
-  flex: 1;
+/* #navigation {
   text-align: right;
-}
+} */
 
 #navigation a {
   display: inline-block;
@@ -184,8 +184,6 @@ body {
 
 .rotate {
   width: 80px;
-  position: relative;
-  left: 30px;
   padding-bottom: 20px;
   animation: rotation 3s infinite linear;
   animation-delay: 0.04s;
@@ -204,7 +202,7 @@ body {
   font-size: 15px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 940px) {
   #navigation {
     width: 100%;
     background: linear-gradient(#87cefa, #365264);
