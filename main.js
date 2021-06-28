@@ -70,7 +70,7 @@ function setRememberMeLocalStorage() {
 
 // first thing to run once page loads
 function checkLocalStorage() {
-  if (localStorage.is21) {
+  if (localStorage.getItem('is21')) {
     ageGateContainer.style.display = 'none';
     menuList.style.display = 'block';
   }
