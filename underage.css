@@ -40,7 +40,7 @@ nav a:hover {
 }
 
 #main-area {
-  width: 100%;
+  width: 90%;
   height: 100vh;
   background: url('./under-background-pic.jpeg');
   background-position: center;
@@ -52,6 +52,7 @@ nav a:hover {
   font-size: 2vw;
   color: #fff;
   padding: 5%;
+  text-align: center;
 }
 
 #main-area h1 {
