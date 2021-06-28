@@ -229,8 +229,7 @@ nav a:hover {
     color: rgb(214, 110, 25);
   }
   .menu-icon {
-    display: block;
-    pointer-events: none;
+    display: hidden;
   }
   #ab {
     display: none;
