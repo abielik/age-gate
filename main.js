@@ -65,7 +65,7 @@ function checkAge(age) {
 
 // checks if remember me box is checked upon age confirmation click
 function setRememberMeLocalStorage() {
-  localStorage.is21 = true;
+  localStorage.setItem('is21', 'true');
 }
 
 // first thing to run once page loads
