@@ -77,6 +77,10 @@ function checkLocalStorage() {
 }
 
 function toggleMenuOnClick() {
-  isMenuOpen ? (nav.style.maxHeight = '0px') : (nav.style.maxHeight = '100%');
+  if (isMenuOpen) {
+    nav.style.maxHeight = '0px';
+  } else {
+    nav.style.maxHeight = '100%';
+  }
   isMenuOpen = !isMenuOpen;
 }
