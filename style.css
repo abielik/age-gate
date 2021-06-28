@@ -23,7 +23,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .navbar h1 {
@@ -33,6 +33,10 @@ body {
   color: rgb(44, 165, 241);
   width: 110px;
   margin: 30px 0;
+}
+
+#navigation {
+  margin-left: auto;
 }
 
 #navigation a {
@@ -55,6 +59,7 @@ body.show-age-gate .menu-icon {
 }
 
 .menu-icon {
+  margin-left: auto;
   width: 35px;
   cursor: pointer;
   display: none;
@@ -166,6 +171,7 @@ body.show-age-gate .age-gate-container {
 }
 
 .rotate {
+  margin-left: 15px;
   width: 60px;
   padding-bottom: 20px;
   animation: rotation 3s infinite linear;
@@ -185,7 +191,7 @@ body.show-age-gate .age-gate-container {
   font-size: 15px;
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 800px) {
   #navigation {
     display: flex;
     flex-direction: column;
@@ -209,9 +215,6 @@ body.show-age-gate .age-gate-container {
     color: rgb(214, 110, 25);
   }
 
-  .navbar {
-    justify-content: space-between;
-  }
   .menu-icon {
     display: block;
   }
