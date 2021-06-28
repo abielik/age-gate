@@ -121,12 +121,6 @@ body {
   text-align: center;
 }
 
-.col2 img {
-  width: 120px;
-  left: 50px;
-  padding-bottom: 20px;
-}
-
 .logo {
   margin-left: -400px;
   font-family: cursive;
@@ -189,8 +183,11 @@ body {
 }
 
 .rotate {
-  animation: rotation 3s infinite linear;
+  width: 80px;
   position: relative;
+  left: 30px;
+  padding-bottom: 20px;
+  animation: rotation 3s infinite linear;
   animation-delay: 0.04s;
 }
 @keyframes rotation {
@@ -211,13 +208,15 @@ body {
   #navigation {
     width: 100%;
     background: linear-gradient(#87cefa, #365264);
-    position: absolute;
     top: 0px;
     right: 0;
     z-index: 2;
     overflow: hidden;
     transition: 0.5s;
     max-height: 0px;
+    text-align: left;
+    padding-left: 10px;
+    position: absolute;
   }
   #navigation a {
     display: block;
@@ -228,11 +227,20 @@ body {
   #navigation a:hover {
     color: rgb(214, 110, 25);
   }
+
+  .navbar {
+    justify-content: space-between;
+  }
   .menu-icon {
     display: hidden;
   }
   #ab {
-    display: none;
+    font-size: 35px;
+    width: 55px;
+  }
+
+  .rotate {
+    width: 40px;
   }
 
   .main-area {
