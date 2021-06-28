@@ -54,7 +54,7 @@ function checkAge(age) {
   }
   if (age >= 21) {
     ageGateContainer.style.display = 'none';
-    menuList.style.display = 'block';
+    menuList.style.zIndex = 10;
     if (rememberMeCheckbox.checked) {
       setRememberMeLocalStorage();
     }
@@ -72,7 +72,7 @@ function setRememberMeLocalStorage() {
 function checkLocalStorage() {
   if (localStorage.getItem('is21')) {
     ageGateContainer.style.display = 'none';
-    menuList.style.display = 'block';
+    menuList.style.zIndex = 10;
   }
 }
 

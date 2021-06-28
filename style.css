@@ -62,7 +62,7 @@ body {
   cursor: pointer;
   display: none;
   text-align: right;
-  z-index: 10;
+  /* z-index: 10; */
   margin-top: 15px;
 }
 
@@ -232,7 +232,7 @@ body {
     justify-content: space-between;
   }
   .menu-icon {
-    display: hidden;
+    display: block;
   }
   #ab {
     font-size: 35px;
