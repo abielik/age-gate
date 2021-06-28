@@ -206,16 +206,6 @@ nav a:hover {
   font-size: 15px;
 }
 
-.social-media {
-  text-align: center;
-}
-
-.social-media img {
-  height: 35px;
-  margin: 40px;
-  cursor: pointer;
-}
-
 @media only screen and (max-width: 900px) {
   nav {
     width: 100%;
