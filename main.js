@@ -11,15 +11,20 @@ menuList.addEventListener('click', toggleMenuOnClick);
 confirmButton.addEventListener('click', onConfirmButtonClick);
 
 // as soon as page loads, check localStorage
-checkLocalStorage();
+
+if (!isAlreadyAllowedAccess()) {
+  showAgeGate();
+}
 
 function onConfirmButtonClick() {
   const age = getAge(new Date(userBirthday.value));
   checkAge(age);
 }
-/*
-  getAge() will first check number of years. If years equals 21, then need to compare the integer value of the birth month vs the current month. If the birth month is the same as the current month, then need to compare the birth day to see if that day has occured or not
-*/
+/**
+ *  getAge() will first check number of years.
+ *  If years equals 21, then need to compare the integer value of the birth month vs the current month.
+ *  If the birth month is the same as the current month, then need to compare the birth day to see if that day has occured or not
+ */
 function getAge(birthday) {
   const today = new Date();
 
@@ -34,10 +39,12 @@ function getAge(birthday) {
   if (diffInMonths < 0) {
     return diffInYears - 1;
   }
-  /*
-    if none of the above IF statements are truthy, this means the user is born in the current month, and the current year is the year they turn 21. Now it will determine if their birthday day has come or not
-  */
-  // the getDate() is slightly off which is why the If statement compares against the number 1 and not 0
+
+  /**
+   * if none of the above IF statements are truthy, this means the user is born in the current month, and the current year is the year they turn 21.
+   * Now it will determine if their birthday day has come or not
+   * the getDate() is slightly off which is why the If statement compares against the number 1 and not 0
+   */
   const diffInDays = today.getDate() - birthday.getDate();
   if (diffInDays >= 1) {
     return diffInYears;
@@ -52,15 +59,25 @@ function checkAge(age) {
     ageErrorMessage.innerText = 'Please choose a valid date.';
     return;
   }
-  if (age >= 21) {
-    ageGateContainer.style.display = 'none';
-    menuList.style.zIndex = 10;
-    if (rememberMeCheckbox.checked) {
-      setRememberMeLocalStorage();
-    }
-  } else {
-    window.location.href = './underage.html';
+
+  if (age < 21) {
+    return (window.location.href = './underage.html');
   }
+
+  // user is 21+
+
+  hideAgeGate();
+  if (rememberMeCheckbox.checked) {
+    setRememberMeLocalStorage();
+  }
+}
+
+function showAgeGate() {
+  document.body.classList.add('show-age-gate');
+}
+
+function hideAgeGate() {
+  document.body.classList.remove('show-age-gate');
 }
 
 // checks if remember me box is checked upon age confirmation click
@@ -68,12 +85,14 @@ function setRememberMeLocalStorage() {
   localStorage.setItem('is21', 'true');
 }
 
-// first thing to run once page loads
-function checkLocalStorage() {
+/**
+ * Returns true when user is in localStorage as 21+
+ */
+function isAlreadyAllowedAccess() {
   if (localStorage.getItem('is21')) {
-    ageGateContainer.style.display = 'none';
-    menuList.style.zIndex = 10;
+    return true;
   }
+  return false;
 }
 
 function toggleMenuOnClick() {
