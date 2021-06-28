@@ -141,6 +141,7 @@ body.show-age-gate .age-gate-container {
 
 .age-gate h2 {
   text-shadow: 2px 2px black;
+  color: rgb(44, 165, 241);
 }
 .remember-me {
   margin-top: 15px;
@@ -240,10 +241,6 @@ body.show-age-gate .age-gate-container {
   .age-gate {
     background-image: none;
     background: linear-gradient(rgb(0, 0, 0), rgb(44, 165, 241));
-  }
-  .gate-message h2 {
-    color: rgb(44, 165, 241);
-    font-weight: bolder;
   }
 
   .confirm-age-button {
