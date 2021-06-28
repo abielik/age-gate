@@ -64,7 +64,7 @@ body.show-age-gate .menu-icon {
 .main-area {
   width: 100%;
   height: 50%;
-  margin-top: 30vh;
+  margin-top: 20vh;
   color: #fff;
 }
 
@@ -123,11 +123,10 @@ body.show-age-gate .age-gate-container {
 
 .age-gate {
   background-image: url(./agegate-pic.jpeg);
-  background-position: left;
   background-size: cover;
   border-radius: 10px;
   box-shadow: 0 15px 15px rgb(0 0 0 / 20%);
-  padding: 50px 30px;
+  padding: 70px 30px;
   width: 700px;
   max-width: 90%;
   text-align: center;
