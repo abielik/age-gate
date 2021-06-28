@@ -50,12 +50,11 @@ nav a {
   text-transform: uppercase;
   font-weight: bold;
   margin-right: 25px;
-  transition: all 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 nav a:hover {
   color: rgb(44, 165, 241);
-  font-size: 25px;
 }
 
 .menu-icon {
